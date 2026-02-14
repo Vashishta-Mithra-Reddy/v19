@@ -1,6 +1,6 @@
-# Vashishta Mithra Reddy | V19 🚀
+# V19 Agency
 
-> A modern, minimalist portfolio showcasing full-stack development projects and creative digital solutions.
+> A modern, minimalist agency portfolio showcasing full-stack development and creative digital solutions.
 
 **[Live Portfolio](https://v19.tech)** | **[Contact](https://v19.tech/contact)**
 
@@ -11,7 +11,7 @@
 
 ## ✨ About
 
-I'm **Vashishta Mithra Reddy**, a full-stack developer passionate about building digital solutions that make a difference. This portfolio showcases my journey through various domains - from blockchain applications to wellness platforms, from SaaS solutions to creative web experiences.
+V19 Agency builds digital products, brand sites, and business platforms that balance design and performance. This portfolio highlights recent work across health, travel, SaaS, and commerce.
 
 **Highlights:**
 - 🌟 **15+ Production Applications** across diverse industries
@@ -23,7 +23,6 @@ I'm **Vashishta Mithra Reddy**, a full-stack developer passionate about building
 
 ### 🏥 **Health & Wellness**
 - **[Hita](https://hita.v19.tech)** - Comprehensive wellness platform for healthier lifestyles
-- **[Kaizen](https://www.vashishtamithra.com/)** - Gamified Android fitness application
 
 ### 🌐 **Blockchain & Web3**
 - **[Vikraya](https://vikraya.v19.tech)** - Blockchain-powered crop auction platform for farmers

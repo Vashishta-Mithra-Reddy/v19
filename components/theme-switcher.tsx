@@ -1,11 +1,15 @@
 "use client";
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 import useSound from "use-sound";
+import { ThemeToggleButton5 } from "@/components/ui/skiper-ui/skiper4";
+import { useThemeToggle } from "@/components/ui/skiper-ui/skiper26";
 
 export function ThemeSwitcher() {
-  const { setTheme, resolvedTheme } = useTheme();
+  const { isDark, toggleTheme: toggleThemeFromSkiper } = useThemeToggle({
+    variant: "circle",
+    start: "bottom-left",
+  });
   const [mounted, setMounted] = React.useState(false);
   const [click] = useSound("/click.wav", { volume: 0.20 });
 
@@ -18,7 +22,7 @@ export function ThemeSwitcher() {
   }
 
   const toggleTheme = () => {
-    setTheme(resolvedTheme === "light" ? "dark" : "light");
+    toggleThemeFromSkiper();
     click();
   };
 
@@ -33,6 +37,14 @@ export function ThemeSwitcher() {
         </div>
     </>
   );
+
+  // return (
+  //   <ThemeToggleButton5
+  //     isDark={isDark}
+  //     onToggle={toggleTheme}
+  //     className="size-10 p-2"
+  //   />
+  // );
 }
 
 export default ThemeSwitcher;

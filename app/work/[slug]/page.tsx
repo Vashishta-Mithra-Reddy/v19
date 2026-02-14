@@ -313,7 +313,7 @@ export default async function WorkPage({
       <section className="w-full py-20 border-t border-foreground/10 bg-foreground/[0.02]">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <h2 className="text-3xl font-bold font-jakarta">More Projects</h2>
-          <p className="text-foreground/60 mt-2">Explore other things I've built</p>
+          <p className="text-foreground/60 mt-2">Explore more agency work</p>
         </div>
         <div className="w-full">
           <Slider filterType={item.type} />

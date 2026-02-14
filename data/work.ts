@@ -317,32 +317,32 @@ export const works: WorkItem[] = [
     highlights: ["Admin dashboard", "Booking management", "Role-based security"],
     roles: ["Frontend", "System Design"]
   },
-  {
-    slug: "kaizen",
-    title: "Kaizen",
-    summary: "Gamified Android fitness",
-    description: "Android app with gamified fitness tracking. Makes working out fun by adding game mechanics to your daily fitness routine.",
-    logo: "/logos/kaizen.png",
-    links: { site: "https://www.vashishtamithra.com/" },
-    tech: ["Android", "Kotlin", "Firebase", "Jetpack Compose", "Room"],
-    status: "Archive",
-    date: "2022-08-10",
-    highlights: ["Gamification mechanics", "Native Android UI", "Real-time tracking"],
-    roles: ["Mobile Development"]
-  },
-  {
-    slug: "krushi",
-    title: "Krushi",
-    summary: "IoT soil & animal monitoring",
-    description: "IoT system for agriculture monitoring. Integrates sensors for soil health and animal tracking with cloud data ingestion for real-time insights.",
-    logo: "/logos/krushi.png",
-    links: { repo: "https://github.com/Vashishta-Mithra-Reddy/Agro_T" },
-    tech: ["IoT", "Embedded C", "Cloud Computing", "MQTT", "Arduino", "DHT Sensors"],
-    status: "Archive",
-    date: "2021-11-20",
-    highlights: ["Hardware-software integration", "Real-time sensor data", "Cloud dashboard"],
-    roles: ["Hardware", "Backend"]
-  }
+  // {
+  //   slug: "kaizen",
+  //   title: "Kaizen",
+  //   summary: "Gamified Android fitness",
+  //   description: "Android app with gamified fitness tracking. Makes working out fun by adding game mechanics to your daily fitness routine.",
+  //   logo: "/logos/kaizen.png",
+  //   links: { site: "https://www.vashishtamithra.com/" },
+  //   tech: ["Android", "Kotlin", "Firebase", "Jetpack Compose", "Room"],
+  //   status: "Archive",
+  //   date: "2022-08-10",
+  //   highlights: ["Gamification mechanics", "Native Android UI", "Real-time tracking"],
+  //   roles: ["Mobile Development"]
+  // },
+  // {
+  //   slug: "krushi",
+  //   title: "Krushi",
+  //   summary: "IoT soil & animal monitoring",
+  //   description: "IoT system for agriculture monitoring. Integrates sensors for soil health and animal tracking with cloud data ingestion for real-time insights.",
+  //   logo: "/logos/krushi.png",
+  //   links: { repo: "https://github.com/Vashishta-Mithra-Reddy/Agro_T" },
+  //   tech: ["IoT", "Embedded C", "Cloud Computing", "MQTT", "Arduino", "DHT Sensors"],
+  //   status: "Archive",
+  //   date: "2021-11-20",
+  //   highlights: ["Hardware-software integration", "Real-time sensor data", "Cloud dashboard"],
+  //   roles: ["Hardware", "Backend"]
+  // }
 ];
 
 export function getWorkList(): WorkItem[] {

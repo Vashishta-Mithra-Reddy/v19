@@ -13,6 +13,7 @@ import Header from "@/components/blocks/header";
 import BottomNav from "@/components/blocks/bottom-nav";
 import BottomGradient from "@/components/BottomGradient";
 import ConsoleBrand from "@/components/ConsoleBrand";
+import { ProgressiveBlur } from "@/components/ui/skiper-ui/skiper41";
 // import GlobalBackground from "@/components/GlobalBackground";
 import PWA from "@/components/PWA";
 
@@ -22,8 +23,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Vashishta Mithra Reddy",
-  description: "Vashishta Mithra Reddy's Portfolio",
+  title: "Studio V19",
+  description: "V19 Agency Portfolio",
   applicationName: "V19",
   manifest: "/manifest.webmanifest",
   themeColor: [
@@ -92,8 +93,16 @@ export default function RootLayout({
             {children}
             <Analytics />
           </div>
+          
+          <ProgressiveBlur
+            height="80px"
+            position="bottom"
+            blurAmount="14px"
+            className="fixed bottom-0 left-0 right-0 z-30"
+          />
+          
           <Toaster position="bottom-center" />
-          <BottomGradient/>
+          {/* <BottomGradient/> */}
           <BottomNav/>
           <Footer />
         </ThemeProvider>

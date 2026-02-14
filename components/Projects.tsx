@@ -7,6 +7,7 @@ import { getWorkList } from "@/data/work";
 import { ExternalLink } from "lucide-react";
 
 const thingy = ["Stuff ", "I ", "have ", "built."];
+const thingyx = ["Experiences", "We", "Have", "Built"]
 
 export default function Projects() {
   const allWorks = getWorkList();
@@ -20,45 +21,71 @@ export default function Projects() {
   return (
     <section className="w-full min-h-screen text-foreground font-satoshi wrapperx">
       <div className="max-w-4xl mx-auto">
-        {/* Personal Projects Header */}
-        <h2 className="text-4xl font-bold mb-20 text-center text-foreground/60 flex items-center justify-center">
-          {thingy.map((word, index) => (
+
+        {/* Agency Projects Section */}
+
+        <motion.h2
+          className="text-4xl font-bold mb-20 mt-4 text-center text-foreground/60 flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          {thingyx.map((word, index) => (
             <motion.span
               key={index}
               className="inline-block mr-2"
-              initial={{ opacity: 0, y: 10, filter: "blur(5px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              variants={{
+                hidden: { opacity: 0, y: 10, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" }
+              }}
               transition={{ duration: 0.8, delay: index * 0.2, type: "decay" }}
             >
               {word}
             </motion.span>
           ))}
-        </h2>
+        </motion.h2>
 
-        {/* Personal Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {personalProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-
-        {/* Agency Projects Section */}
         {agencyProjects.length > 0 && (
-          <FadeInWhenVisible>
-            <div className="mt-32 mb-16 flex flex-col items-center justify-center gap-4">
-              <div className="flex items-center gap-4">
-                <h2 className="text-4xl font-bold text-center text-foreground/60">
-                  Agency Work
-                </h2>
-              </div>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {agencyProjects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
+
+              {personalProjects.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
             </div>
-          </FadeInWhenVisible>
         )}
+
+        {/* Personal Projects Header */}
+        {/* <motion.h2
+          className="text-4xl font-bold pt-12 mb-20 text-center text-foreground/60 flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          {thingy.map((word, index) => (
+            <motion.span
+              key={index}
+              className="inline-block mr-2"
+              variants={{
+                hidden: { opacity: 0, y: 10, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" }
+              }}
+              transition={{ duration: 0.8, delay: index * 0.2, type: "decay" }}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.h2> */}
+
+        {/* Personal Projects Grid */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {personalProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div> */}
+
       </div>
     </section>
   );

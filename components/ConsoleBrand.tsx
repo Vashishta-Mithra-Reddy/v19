@@ -22,7 +22,7 @@ export default function ConsoleBrand() {
       ].join(';');
 
       console.log('%cV19', brandStyles);
-      console.log('%cPortfolio • v19.tech • Say hi at me@vashishtamithra.com', subStyles);
+      console.log('%cAgency • v19.tech', subStyles);
       console.log('%chttps://v19.tech', 'color: #888; font-size: 12px;');
     };
 

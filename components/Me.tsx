@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
 import FadeInWhenVisible from "./animations/FadeInWhenVisible";
 import { InfiniteSlider } from "./ui/infinite-slider";
 
 const SKILLS_1 = [
   "Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js",
-  "Python", "Solidity", "Web3", "AI/ML", "RAG"
+  "Python", "Solidity", "Web3", "AI/ML", "RAG", "Fast API"
 ];
 
 const SKILLS_2 = [
   "Framer Motion", "PostgreSQL", "Supabase", "Drizzle", "Docker",
-  "AWS", "Kotlin", "Jetpack Compose", "Arduino", "IoT"
+  "AWS", "GCP", "Cloudflare", "Arduino", "IoT"
 ];
 
 export default function Me() {

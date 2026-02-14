@@ -85,17 +85,17 @@ export default function Header() {
               <p className="font-bricolage font-bold text-foreground/20 pr-0.5">{thingy}</p>
               <div className="flex flex-row items-center gap-4">
               <ThemeSwitcher/>
-              <Link
+              {/* <Link
                 href="/store" 
                 className="hidden md:block px-6 py-3 rounded-xl font-satoshi bg-foreground/10 text-foreground text-sm tracking-wide hover:bg-foreground/15"
               >
                 Store
-              </Link>
+              </Link> */}
               <Link
                 href="/contact" 
                 className="px-6 py-3 rounded-xl font-satoshi bg-foreground text-background text-sm tracking-wide hover:bg-foreground/90"
               >
-                Contact
+                Let's get you started
               </Link>
               </div>
             </div>
