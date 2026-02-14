@@ -73,11 +73,11 @@ export default function Me() {
           {/* Skills Marquee */}
           <div className="w-full pt-12 space-y-8">
             <FadeInWhenVisible>
-              <div className="flex flex-col items-center gap-4 mb-8">
+              <div className="flex flex-col items-center gap-4 mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold font-jakarta tracking-tight">
-                  Tech Stack
+                  We Build With
                 </h2>
-                <div className="w-20 h-1.5 bg-foreground/10 rounded-full" />
+                {/* <div className="w-20 h-1.5 bg-foreground/10 rounded-full" /> */}
               </div>
             </FadeInWhenVisible>
 
