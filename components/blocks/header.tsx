@@ -11,10 +11,11 @@ import { useTheme } from "next-themes";
 export default function Header() {
     const { resolvedTheme } = useTheme();
     const thingy = resolvedTheme === "dark" ? "{Turn on the lights?} ->" : "{Turn off the lights?} -> ";
+    const thingyx = resolvedTheme === "dark" ? "" : "{Lights Out?}";
     const [hoverCar, setHoverCar] = useState(false);
     return (
         <motion.nav
-          className="w-full max-w-6xl flex justify-center h-20 backdrop-blur-3xl fixed top-0 md:top-8 left-1/2 transform -translate-x-1/2 rounded-none md:rounded-xl px-6 md:px-4 z-40"
+          className="w-full max-w-6xl flex items-center justify-center h-20 backdrop-blur-3xl fixed top-0 md:top-8 left-1/2 transform -translate-x-1/2 rounded-none md:rounded-xl px-6 md:px-4 z-40"
           initial={{ opacity: 0, y: -10, filter: "blur(5px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ type: "spring", stiffness: 60, damping: 10, bounce: 0.45, visualDuration: 4 }}
@@ -82,7 +83,8 @@ export default function Header() {
             </div>
             {/* <Navigation /> */}
             <div className="flex flex-row items-center">
-              <p className="font-bricolage font-bold text-foreground/20 pr-0.5">{thingy}</p>
+              <p className="hidden md:block font-bricolage font-bold text-foreground/20 pr-0.5">{thingy}</p>
+              <p className="md:hidden block font-bricolage font-bold text-foreground/20 pr-0.5">{thingyx}</p>
               <div className="flex flex-row items-center gap-4">
               <ThemeSwitcher/>
               {/* <Link
@@ -95,7 +97,8 @@ export default function Header() {
                 href="/contact" 
                 className="px-6 py-3 rounded-xl font-satoshi bg-foreground text-background text-sm tracking-wide hover:bg-foreground/90"
               >
-                Let's get you started
+                <p className="md:block hidden">Let's get you started</p>
+                <p className="md:hidden block">Contact</p>
               </Link>
               </div>
             </div>

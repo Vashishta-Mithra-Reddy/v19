@@ -2,12 +2,23 @@
 import Link  from "next/link";
 import Image from "next/image";
 import Beams from "../Beams";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+// import { Calendar } from "lucide-react";
 
 
 export default function Footer() {
   const email = "me@vashishtamithra.com";
   const x = "{}";
   const y = "{/**/}";
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({"namespace":"30min"});
+      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    })();
+  }, []);
+
   const socials = [
     { name: "X (Twitter)", url: "https://x.com/v19tech", icon: "/socials/twitter.svg", invert:true },
     { name: "GitHub", url: "https://github.com/Vashishta-Mithra-Reddy", icon: "/socials/github.svg", invert:true },
@@ -49,12 +60,16 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-3">
-              <a
-                href={`mailto:${email}`}
-                className="px-4 py-2 rounded-xl bg-foreground text-background text-sm tracking-wide hover:bg-foreground/90 transition-colors"
+              <button
+                data-cal-namespace="30min"
+                data-cal-link="vashishta/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                className="px-4 py-2 rounded-xl bg-foreground font-medium font-bricolage text-background text-sm tracking-wide hover:bg-foreground/90 transition-colors flex items-center gap-2"
               >
-                {email}
-              </a>
+                
+                {/* <Calendar className="w-4 h-4" /> */}
+                <span>Book a call with us</span>
+              </button>
               {/* <ThemeSwitcher /> */}
             </div>
             <div className="flex gap-3 mt-1">

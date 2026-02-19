@@ -7,7 +7,7 @@ import { getWorkList } from "@/data/work";
 import { ExternalLink } from "lucide-react";
 
 const thingy = ["Stuff ", "I ", "have ", "built."];
-const thingyx = ["Experiences", "We", "Have", "Built"]
+const thingyx = ["Experiences", "We", "Have", "Built."]
 
 export default function Projects() {
   const allWorks = getWorkList();
@@ -25,7 +25,7 @@ export default function Projects() {
         {/* Agency Projects Section */}
 
         <motion.h2
-          className="text-4xl font-bold mb-20 mt-4 text-center text-foreground/60 flex items-center justify-center"
+          className="text-4xl font-bold mb-20 mt-4 text-center text-foreground/60 flex flex-wrap items-center justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
